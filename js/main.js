@@ -17,6 +17,10 @@ $( document ).ready(function() {
     // it does not run until the DOM is ready for Javascript manipulation.
 
     // TODO: Create a function to listen for clicks on the "login" button.
+    $('#login-form .btn').on('click', function(event){
+      $('#login-form').hide();
+      $('.user-info').show(); //.css('display','inline')
+    });
     //      1. When a user clicks the "login" button, hide the login
     //          form elements on the page.
     //      2. Fill the user's first and last name into `div.user-info`.
