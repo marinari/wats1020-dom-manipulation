@@ -13,6 +13,7 @@ $( document ).ready(function() {
         greatest: 0,
         total: 0
     };
+});
     // Place all your Javascript code inside this "document ready" function so
     // it does not run until the DOM is ready for Javascript manipulation.
 
