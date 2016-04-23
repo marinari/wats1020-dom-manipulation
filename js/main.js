@@ -41,6 +41,24 @@ $( document ).ready(function() {
     // TODO: Create a function that listens for clicks on the voting buttons and
     // looks at the `data-vote` attribute on each button to see what was voted for,
     // then determines the updated vote breakdown to adjust the progress bars.
+    $('.voting button').on('click', function(event){
+      if ($(this).attr('data-vote') === 'great'){
+			++voteCounts.great;
+      ++voteCounts.total;
+      console.log(voteCounts);
+
+		}else if {
+			++voteCounts.greatest;
+      ++voteCounts.total;
+      console.log(voteCounts);
+    }
+    });
+
+    var bluePercent = voteCounts.great / voteCounts.total * 100;
+    $('.great-progress').attr('style',"width: " + bluePercent + '%' );
+
+    var greenPercent = voteCounts.greatest / voteCounts.total * 100;
+    $('.greatest-progress').attr('style',"width: " + greenPercent + '%');
     //      1. Set up an event listener on the buttons with the `vote` class.
     //      2. When a button is clicked, look at the `data-vote` attribute to determine
     //          what the user is voting for ("great" or "greatest").
