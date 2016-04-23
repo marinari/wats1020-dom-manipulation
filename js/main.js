@@ -17,16 +17,14 @@ $( document ).ready(function() {
     // Place all your Javascript code inside this "document ready" function so
     // it does not run until the DOM is ready for Javascript manipulation.
 
-    // TODO: Create a function to listen for clicks on the "login" button.
+    //function to listen for clicks on the "login" button.
+    // When a user clicks the "login" button, hide the login form elements on the page.
     $('#login-form .btn').on('click', function(event){
       $('#login-form').hide();
       $('.user-info').show(); //.css('display','inline')
+      // Fill the user's first and last name into `div.user-info`.
+      $('span.user-fullname').text(' ' + userInfo.firstName + ' ' + userInfo.lastName);
     });
-    //      1. When a user clicks the "login" button, hide the login
-    //          form elements on the page.
-    //      2. Fill the user's first and last name into `div.user-info`.
-    //      (NOTE: You do not have to perform any validation on the data as
-    //          a base requirement.)
 
 
     // TODO: Create a function to listen for clicks on all the "View Details"
@@ -54,8 +52,8 @@ $( document ).ready(function() {
     }
   });
 
-    var bluePercent = (voteCounts.great/voteCounts.total) * 100;
-    $('.great-progress').css("width", voteCounts.great);
+    var bluePercent = (voteCounts.great/voteCounts.total) * 100 + '%';
+    $('.great-progress').css('width', bluePercent);
 
     var greenPercent = (voteCounts.greatest/voteCounts.total) * 100;
     $('.greatest-progress').attr('style',"width: " + greenPercent + '%');
