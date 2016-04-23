@@ -52,11 +52,11 @@ $( document ).ready(function() {
     }
   });
 
-    var bluePercent = (voteCounts.great/voteCounts.total) * 100 + '%';
+    var bluePercent = ((voteCounts.great/voteCounts.total) * 100 + '%');
     $('.great-progress').css('width', bluePercent);
 
-    var greenPercent = (voteCounts.greatest/voteCounts.total) * 100;
-    $('.greatest-progress').attr('style',"width: " + greenPercent + '%');
+    var greenPercent = ((voteCounts.greatest/voteCounts.total) * 100 + '%');
+    $('.greatest-progress').css('width', greenPercent);
     //      1. Set up an event listener on the buttons with the `vote` class.
     //      2. When a button is clicked, look at the `data-vote` attribute to determine
     //          what the user is voting for ("great" or "greatest").
