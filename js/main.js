@@ -45,14 +45,14 @@ $( document ).ready(function() {
     $('.voting button').on('click', function(event){
       if ($(this).attr('data-vote') === 'great'){
 			++voteCounts.great;
-      //++voteCounts.total;
+      ++voteCounts.total;
       console.log(voteCounts);
 		  } else {
 			++voteCounts.greatest;
-      //++voteCounts.total;
+      ++voteCounts.total;
       console.log(voteCounts);
     }
-    });
+  });
 
     var bluePercent = (voteCounts.great/voteCounts.total) * 100;
     $('.great-progress').attr('style',"width: " + bluePercent + '%' );
