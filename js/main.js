@@ -55,7 +55,7 @@ $( document ).ready(function() {
   });
 
     var bluePercent = (voteCounts.great/voteCounts.total) * 100;
-    $('.great-progress').attr('style',"width: " + bluePercent + '%' );
+    $('.great-progress').css("width", voteCounts.great);
 
     var greenPercent = (voteCounts.greatest/voteCounts.total) * 100;
     $('.greatest-progress').attr('style',"width: " + greenPercent + '%');
