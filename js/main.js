@@ -13,7 +13,7 @@ $( document ).ready(function() {
         greatest: 0,
         total: 0
     };
-});
+
     // Place all your Javascript code inside this "document ready" function so
     // it does not run until the DOM is ready for Javascript manipulation.
 
@@ -45,20 +45,19 @@ $( document ).ready(function() {
     $('.voting button').on('click', function(event){
       if ($(this).attr('data-vote') === 'great'){
 			++voteCounts.great;
-      ++voteCounts.total;
+      //++voteCounts.total;
       console.log(voteCounts);
-
-		}else if {
+		  } else {
 			++voteCounts.greatest;
-      ++voteCounts.total;
+      //++voteCounts.total;
       console.log(voteCounts);
     }
     });
 
-    var bluePercent = voteCounts.great / voteCounts.total * 100;
+    var bluePercent = (voteCounts.great/voteCounts.total) * 100;
     $('.great-progress').attr('style',"width: " + bluePercent + '%' );
 
-    var greenPercent = voteCounts.greatest / voteCounts.total * 100;
+    var greenPercent = (voteCounts.greatest/voteCounts.total) * 100;
     $('.greatest-progress').attr('style',"width: " + greenPercent + '%');
     //      1. Set up an event listener on the buttons with the `vote` class.
     //      2. When a button is clicked, look at the `data-vote` attribute to determine
