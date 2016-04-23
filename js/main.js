@@ -50,7 +50,7 @@ $( document ).ready(function() {
       ++voteCounts.total;
       console.log(voteCounts);
     }
-  });
+
 
     var voteCounts.total = voteCounts.great + voteCounts.greatest;
     var bluePercent = ((voteCounts.great/voteCounts.total) * 100 + '%');
@@ -64,5 +64,5 @@ $( document ).ready(function() {
     //      3. Increment the counter for whichever vote talley is affected.
     //      4. Determine the respective percentages (out of 100) for each progress bar.
     //      5. Modify the `width` attribute on each progress bar to set the updated percentage.
-
+    });
 });
