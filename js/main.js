@@ -37,9 +37,11 @@ $( document ).ready(function() {
     //      4. Change the text of the "view details" button to read "hide details" so the user
     //          understands they can hide the text again.
 
-    // TODO: Create a function that listens for clicks on the voting buttons and
-    // looks at the `data-vote` attribute on each button to see what was voted for,
-    // then determines the updated vote breakdown to adjust the progress bars.
+
+
+    // Set up an event listener on the buttons with the `vote` class.
+    // When a button is clicked, look at the `data-vote` attribute to determine what the user is voting for
+    // Increment the counter for whichever vote talley is affected.
     $('.voting button').on('click', function(event){
       if ($(this).attr('data-vote') === 'great'){
 			++voteCounts.great;
@@ -50,17 +52,13 @@ $( document ).ready(function() {
       ++voteCounts.total;
       console.log(voteCounts);
     }
-
+    // Determine the respective percentages (out of 100) for each progress bar.
+    // Modify the `width` attribute on each progress bar to set the updated percentage.
     var bluePercent = ((voteCounts.great/voteCounts.total) * 100 + '%');
     $('.great-progress').css('width', bluePercent);
 
     var greenPercent = ((voteCounts.greatest/voteCounts.total) * 100 + '%');
     $('.greatest-progress').css('width', greenPercent);
-    //      1. Set up an event listener on the buttons with the `vote` class.
-    //      2. When a button is clicked, look at the `data-vote` attribute to determine
-    //          what the user is voting for ("great" or "greatest").
-    //      3. Increment the counter for whichever vote talley is affected.
-    //      4. Determine the respective percentages (out of 100) for each progress bar.
-    //      5. Modify the `width` attribute on each progress bar to set the updated percentage.
+
     });
 });
