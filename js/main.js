@@ -52,6 +52,7 @@ $( document ).ready(function() {
     }
   });
 
+    var voteCounts.total = voteCounts.great + voteCounts.greatest;
     var bluePercent = ((voteCounts.great/voteCounts.total) * 100 + '%');
     $('.great-progress').css('width', bluePercent);
 
