@@ -27,7 +27,7 @@ $( document ).ready(function() {
     });
 
     //When user clicks a "view details" button, find the parent of that element.
-    $('.view-details').on('click', function(event)){
+    $('.view-details').on('click', function(event){
       console.log(event);
       var targetElement = event.target;
       var container = targetElement.parentElement.parentElement;
@@ -39,7 +39,7 @@ $( document ).ready(function() {
           $(el).fadeIn();
           targetElement.innerText = "Hide Details"
         }
-      }      
+      }
     });
     //      2. Within that parent, find all the elements that have the class `details`.
     //      3. Toggle visibility of all the elements within that parent with the class `details`.
