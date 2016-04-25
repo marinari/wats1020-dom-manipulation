@@ -32,7 +32,7 @@ $( document ).ready(function() {
       var targetElement = event.target;
       var container = targetElement.parentElement.parentElement;
       $(container).find('.details').each(function(index, el){
-        if($el).is(':visible')){
+        if($(el).is(':visible')){
           $(el).fadeOut();
           targetElement.innerText = "View Details"
         } else {
