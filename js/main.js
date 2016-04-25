@@ -39,7 +39,7 @@ $( document ).ready(function() {
           $(el).fadeIn();
           targetElement.innerText = "Hide Details"
         }
-      }
+      });
     });
     //      2. Within that parent, find all the elements that have the class `details`.
     //      3. Toggle visibility of all the elements within that parent with the class `details`.
