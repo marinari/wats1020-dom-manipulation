@@ -14,9 +14,6 @@ $( document ).ready(function() {
         total: 0
     };
 
-    // Place all your Javascript code inside this "document ready" function so
-    // it does not run until the DOM is ready for Javascript manipulation.
-
     //function to listen for clicks on the "login" button.
     // When a user clicks the "login" button, hide the login form elements on the page.
     $('#login-form .btn').on('click', function(event){
@@ -31,9 +28,12 @@ $( document ).ready(function() {
       console.log(event);
       var targetElement = event.target;
       var container = targetElement.parentElement.parentElement;
+      // Within that parent, find all the elements that have the class `details`.
       $(container).find('.details').each(function(index, el){
+      // Toggle visibility of all the elements within that parent with the class `details`.
         if($(el).is(':visible')){
           $(el).fadeOut();
+          //Change the text of the "view details" button to read "hide details"
           targetElement.innerText = "View Details"
         } else {
           $(el).fadeIn();
@@ -41,10 +41,6 @@ $( document ).ready(function() {
         }
       });
     });
-    //      2. Within that parent, find all the elements that have the class `details`.
-    //      3. Toggle visibility of all the elements within that parent with the class `details`.
-    //      4. Change the text of the "view details" button to read "hide details" so the user
-    //          understands they can hide the text again.
 
 
 
